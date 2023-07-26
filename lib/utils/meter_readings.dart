@@ -11,9 +11,6 @@ class MeterReadings extends CustomPainter {
     return degree * pi / 180;
   }
 
-  double radianToDegree(double radian) {
-    return radian * 180 / pi;
-  }
 
   @override
   void paint(Canvas canvas, Size size) {

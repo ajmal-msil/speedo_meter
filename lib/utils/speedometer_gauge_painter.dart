@@ -3,7 +3,7 @@ import 'dart:math' as math;
 
 class SpeedometerGaugePainter extends CustomPainter {
 
-  double PI = math.pi;          //3.14 degree-180
+  double pi = math.pi;          //3.14 degree-180
 
   SpeedometerGaugePainter({
     required this.value,
@@ -13,15 +13,15 @@ class SpeedometerGaugePainter extends CustomPainter {
   var maxValue = 35;
 
   double degreeToRadian(double degree) {
-    return degree * PI / 180;
+    return degree * pi / 180;
   }
 
   double radianToDegree(double radian) {
-    return radian * 180 / PI;
+    return radian * 180 / pi;
   }
   @override
   void paint(Canvas canvas, Size size) {
-    var archAngle = PI /6;
+    var archAngle = pi /6;
     var gapAngle = degreeToRadian(3);
 
 
@@ -32,7 +32,7 @@ class SpeedometerGaugePainter extends CustomPainter {
       ..strokeWidth = 10;
 
     //draw arc  - start angle - 180 , sweep angle - 210
-    var startAngel180 = PI;
+    var startAngel180 = pi;
     canvas.drawArc(
         Rect.fromCenter(
           center: Offset(size.width / 2, size.height / 2),
@@ -45,7 +45,7 @@ class SpeedometerGaugePainter extends CustomPainter {
         paint1);
 
     //draw arc  - start angle - 210 , sweep angle - 240
-    var startAngel210 = (7* PI) / 6;
+    var startAngel210 = (7* pi) / 6;
     canvas.drawArc(
         Rect.fromCenter(
           center: Offset(size.width / 2, size.height / 2),
@@ -58,7 +58,7 @@ class SpeedometerGaugePainter extends CustomPainter {
         paint1);
 
     //draw arc - start angle - 240 , sweep angle - 270
-    var startAngel240 = (4 * PI) / 3;
+    var startAngel240 = (4 * pi) / 3;
     canvas.drawArc(
         Rect.fromCenter(
           center: Offset(size.width / 2, size.height / 2),
@@ -78,7 +78,7 @@ class SpeedometerGaugePainter extends CustomPainter {
       ..strokeWidth = 10;
 
     //draw arc of 270 to 300 degree
-    var startAngel270 = (3 * PI) / 2;
+    var startAngel270 = (3 * pi) / 2;
     canvas.drawArc(
         Rect.fromCenter(
           center: Offset(size.width / 2, size.height / 2),
@@ -91,7 +91,7 @@ class SpeedometerGaugePainter extends CustomPainter {
         paint2);
 
     //draw arc of 300 to 330 degree
-    var startAngel300 = (5 * PI) / 3;
+    var startAngel300 = (5 * pi) / 3;
     canvas.drawArc(
         Rect.fromCenter(
           center: Offset(size.width / 2, size.height / 2),
@@ -104,7 +104,7 @@ class SpeedometerGaugePainter extends CustomPainter {
         paint2);
 
     //draw arc of 330 to 360 degree
-    var startAngel330 = (11 * PI) / 6;
+    var startAngel330 = (11 * pi) / 6;
     canvas.drawArc(
         Rect.fromCenter(
           center: Offset(size.width / 2, size.height / 2),
@@ -137,7 +137,7 @@ class SpeedometerGaugePainter extends CustomPainter {
       value = maxValue;
     }
 
-    var degreeVal = ((value - minValue) * PI) / (maxValue - minValue);
+    var degreeVal = ((value - minValue) * pi) / (maxValue - minValue);
 
     // if 30
     var needleEndX = circleRadius - (needleLength * math.cos(degreeVal));

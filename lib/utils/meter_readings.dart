@@ -4,15 +4,15 @@ import 'dart:math' as math;
 import 'package:speedo_meter/constants.dart';
 
 class MeterReadings extends CustomPainter {
-  double PI = math.pi;
+  double pi = math.pi;
 
 
   double degreeToRadian(double degree) {
-    return degree * PI / 180;
+    return degree * pi / 180;
   }
 
   double radianToDegree(double radian) {
-    return radian * 180 / PI;
+    return radian * 180 / pi;
   }
 
   @override
@@ -20,7 +20,7 @@ class MeterReadings extends CustomPainter {
     var radius = size.width / 2;
    // S1
     final TextPainter textPainter = TextPainter(
-        text: TextSpan(text:Constants.s3, style: TextStyle(color: Colors.red)),
+        text: TextSpan(text:Constants.s3, style: const TextStyle(color: Colors.red)),
         textAlign: TextAlign.justify,
         textDirection: TextDirection.ltr)
       ..layout(maxWidth: size.width);
@@ -37,7 +37,7 @@ class MeterReadings extends CustomPainter {
         30 * math.tan(degreeToRadian(30));
     var offsetS2 = Offset(dx, dy);
     final TextPainter textPainter2 = TextPainter(
-        text: TextSpan(text:Constants.s2, style: TextStyle(color: Colors.red)),
+        text: TextSpan(text:Constants.s2, style: const TextStyle(color: Colors.red)),
         textAlign: TextAlign.justify,
         textDirection: TextDirection.ltr)
       ..layout(maxWidth: size.width / 2);
@@ -52,7 +52,7 @@ class MeterReadings extends CustomPainter {
         32 * math.tan(degreeToRadian(30));
     var offsetS1 = Offset(dx, dy);
     final TextPainter textPainter3 = TextPainter(
-        text: TextSpan(text:Constants.s1, style: TextStyle(color: Colors.red)),
+        text: TextSpan(text:Constants.s1, style: const TextStyle(color: Colors.red)),
         textAlign: TextAlign.justify,
         textDirection: TextDirection.ltr)
       ..layout(maxWidth: size.width);
@@ -61,13 +61,13 @@ class MeterReadings extends CustomPainter {
     //PIVOT
     dx = size.width / 2 - 25;
     dy = -30;
-    var offsetp = Offset(dx, dy);
+    var offsetPivot = Offset(dx, dy);
     final TextPainter textPainter4 = TextPainter(
-        text: TextSpan(text: Constants.pivot, style: TextStyle(color: Colors.black)),
+        text: TextSpan(text: Constants.pivot, style: const TextStyle(color: Colors.black)),
         textAlign: TextAlign.justify,
         textDirection: TextDirection.ltr)
       ..layout(maxWidth: size.width);
-    textPainter4.paint(canvas, offsetp);
+    textPainter4.paint(canvas, offsetPivot);
 
 
 
@@ -76,7 +76,7 @@ class MeterReadings extends CustomPainter {
     dy = size.height / 2;
     var offsetR3 = Offset(dx, dy);
     final TextPainter textPainter5 = TextPainter(
-        text: TextSpan(text:Constants.r3, style: TextStyle(color: Colors.green)),
+        text: TextSpan(text:Constants.r3, style: const TextStyle(color: Colors.green)),
         textAlign: TextAlign.justify,
         textDirection: TextDirection.ltr)
       ..layout(maxWidth: size.width);
@@ -87,7 +87,7 @@ class MeterReadings extends CustomPainter {
     dy = radius - (radius * math.sin(degreeToRadian(40)));
     var offsetR2 = Offset(dx, dy);
     final TextPainter textPainter6 = TextPainter(
-        text: TextSpan(text:Constants.r2, style: TextStyle(color: Colors.green)),
+        text: TextSpan(text:Constants.r2, style: const TextStyle(color: Colors.green)),
         textAlign: TextAlign.justify,
         textDirection: TextDirection.ltr)
       ..layout(maxWidth: size.width);
@@ -98,7 +98,7 @@ class MeterReadings extends CustomPainter {
     dy = radius - (radius * math.sin(degreeToRadian(90))) - 5;
     var offsetR1 = Offset(dx, dy);
     final TextPainter textPainter7 = TextPainter(
-        text: TextSpan(text: Constants.r1, style: TextStyle(color: Colors.green)),
+        text: TextSpan(text: Constants.r1, style: const TextStyle(color: Colors.green)),
         textAlign: TextAlign.justify,
         textDirection: TextDirection.ltr)
       ..layout(maxWidth: size.width);

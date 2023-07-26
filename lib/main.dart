@@ -15,7 +15,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       home: BlocProvider(
         create: (context) => SpeedometerBloc(),
-        child: SpeedometerPage(),
+        child: const SpeedometerPage(),
       ),
     );
   }

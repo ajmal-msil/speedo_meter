@@ -7,6 +7,8 @@ import 'package:speedo_meter/constants.dart';
 import 'package:speedo_meter/widgets/speedometer_gauge.dart';
 
 class SpeedometerPage extends StatefulWidget {
+  const SpeedometerPage({super.key});
+
   @override
   State<SpeedometerPage> createState() => _SpeedometerPageState();
 }
@@ -31,7 +33,7 @@ class _SpeedometerPageState extends State<SpeedometerPage> {
                 return SpeedometerGauge(value: enterValue??'0',);
               }
             ))),
-            SizedBox(height: 20),
+            const SizedBox(height: 20),
             Padding(
               padding: const EdgeInsets.all(8.0),
               child: Column(
@@ -45,7 +47,7 @@ class _SpeedometerPageState extends State<SpeedometerPage> {
                       labelText:Constants.enterValue,
                     ),
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 10,
                   ),
                   ElevatedButton(
